@@ -12,6 +12,7 @@ import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from 'react-query/devtools'
 import MoviesContextProvider from "./contexts/moviesContext";
+import AuthContextProvider from "./contexts/authContext";
 import TopRatedMoviesPage from "./pages/topratedMoviesPage";
 import AddMovieReviewPage from './pages/addMovieReviewPage';
 import {Link} from 'react-router-dom'
@@ -49,6 +50,7 @@ useEffect(() => {
     {user != null ? (
       <>
           <SiteHeader />      
+          <AuthContextProvider>
           <MoviesContextProvider>
             <TVContextProvider>
               
@@ -73,7 +75,9 @@ useEffect(() => {
       </Routes>
               
       </TVContextProvider>
-      </MoviesContextProvider></>
+      </MoviesContextProvider>
+      </AuthContextProvider>
+      </>
       ):(
       <Routes>
         <Route path="/login" element={<LoginPage />} />

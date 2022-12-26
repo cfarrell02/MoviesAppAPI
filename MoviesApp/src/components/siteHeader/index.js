@@ -19,6 +19,7 @@ import Avatar from '@mui/material/Avatar';
 import { getSearchResults } from "../../api/tmdb-api";
 import Box from '@mui/material/Box';
 import TheatersIcon from '@mui/icons-material/Theaters';
+import { AuthContext } from "../../contexts/authContext";
 
 
 
@@ -67,14 +68,10 @@ const SiteHeader = ({ history }) => {
   ]
 
   const [searchResults, setSearchResults] = useState([]);
+  const context = useContext(AuthContext);
 
 
-  const [user, setUser] = useState({});
-  useEffect(() => {
-    onAuthStateChanged(getAuth(), (currentUser) => {
-      setUser(currentUser);
-    })});
-    const initial = user.email?.charAt(0).toUpperCase();
+    const initial = 'C'
 
   const handleMenuSelect = (pageURL) => {
     navigate(pageURL, { replace: true });
@@ -105,14 +102,13 @@ const SiteHeader = ({ history }) => {
       navigate(`/person/${value.id}`);
     }
   };
-  const displayName = user.displayName ? user.displayName : user.email;
 
   return (
     <>
       <AppBar position="fixed" color="secondary" sx={{ backgroundColor: 'lightblue', color: 'black'}} >
         <Toolbar>
           <Typography variant="h4" sx={{ flexGrow: 1 }}>
-          <TheatersIcon fontSize='medium'/> {displayName}'s Cinema 
+          <TheatersIcon fontSize='medium'/> {context ? context.userName : ""}'s Cinema 
           </Typography>
 
           <Autocomplete
@@ -218,7 +214,7 @@ const SiteHeader = ({ history }) => {
            <Divider orientation="vertical" flexItem sx={{paddingRight: 2}}/>
             <div style = {{paddingLeft: 10}}>
               <Link to="/login" style={{ textDecoration: "none" }}>
-            <Avatar >{user !== undefined? initial:'-'} </Avatar> 
+            <Avatar >- </Avatar> 
             </Link>
             </div>
             
