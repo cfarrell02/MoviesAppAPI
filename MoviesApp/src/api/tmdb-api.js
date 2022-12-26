@@ -15,6 +15,7 @@ export const getMovies = (args) => {
   });
 };
 
+
 export const getTVShows = (args) => {
   const [, pageNumPart] = args.queryKey;
   const {pageNum} = pageNumPart;
