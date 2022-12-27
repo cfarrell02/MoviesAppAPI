@@ -71,7 +71,6 @@ const SiteHeader = ({ history }) => {
   const context = useContext(AuthContext);
 
 
-    const initial = 'C'
 
   const handleMenuSelect = (pageURL) => {
     navigate(pageURL, { replace: true });
@@ -103,7 +102,7 @@ const SiteHeader = ({ history }) => {
     }
   };
 
-  return (
+  return context.isAuthenticated ? (
     <>
       <AppBar position="fixed" color="secondary" sx={{ backgroundColor: 'lightblue', color: 'black'}} >
         <Toolbar>
@@ -214,7 +213,7 @@ const SiteHeader = ({ history }) => {
            <Divider orientation="vertical" flexItem sx={{paddingRight: 2}}/>
             <div style = {{paddingLeft: 10}}>
               <Link to="/login" style={{ textDecoration: "none" }}>
-            <Avatar >- </Avatar> 
+            <Avatar >{context.userName}</Avatar> 
             </Link>
             </div>
             
@@ -222,6 +221,8 @@ const SiteHeader = ({ history }) => {
       </AppBar>
       <Offset />
     </>
+  ) : (
+    <></>
   );
 };
 

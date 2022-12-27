@@ -23,9 +23,10 @@ import TVReviewPage from "./pages/tvReviewPage";
 import TopRatedTVPage from "./pages/topratedTVPage";
 import TVContextProvider from "./contexts/tvContext";
 import LoginPage from "./pages/loginPage";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { AuthContext } from "./contexts/authContext";
 import PersonDetailsPage from "./pages/actorDetailsPage";
 import AboutPage from "./pages/aboutPage";
+import PrivateRoute from "./privateRoute";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -38,52 +39,47 @@ const queryClient = new QueryClient({
 });
 
 const App = () => {
-  const [user, setUser] = useState({});
-useEffect(() => {
-  onAuthStateChanged(getAuth(), (currentUser) => {
-    setUser(currentUser);
-  })});
+  const context = React.useContext(AuthContext);
+
   return (
 
     <QueryClientProvider client={queryClient}>
     <BrowserRouter>
-    {user != null ? (
       <>
-          <SiteHeader />      
+               
           <AuthContextProvider>
           <MoviesContextProvider>
             <TVContextProvider>
+            <SiteHeader /> 
               
       <Routes>
-        <Route exact path="/movies/favourites" element={<FavouriteMoviesPage />} />
-        <Route path="/movies/:id" element={<MoviePage />} />
-        <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
-        <Route path="/tvshows/reviews/:id" element = {<TVReviewPage/>}/>
-        <Route path="/reviews/form" element={<AddMovieReviewPage/>} />
-        <Route path="/mustwatch" element={<MustWatchMovies/>} />
-        <Route path="/movies/upcoming/page=:pageNumber" element={ <UpcomingMoviesPage /> } />
-        <Route path= "/movies/toprated/page=:pageNumber" element = {<TopRatedMoviesPage/>}/>
-        <Route path="/tvshows/page=:pageNumber" element = {<TVPage/>}/>
-        <Route path="/tvshows/:id" element = {<TVDetailsPage/>}/>
-        <Route path="/tvshows/toprated/page=:pageNumber" element={ <TopRatedTVPage /> } />
-        <Route path="/tvshows/favourites" element={ <FavouriteTVPage /> } />
-        <Route path="/page=:pageNumber" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route exact path="/movies/favourites" element={<PrivateRoute> <FavouriteMoviesPage /></PrivateRoute>} />
+        <Route path="/movies/:id" element={<PrivateRoute><MoviePage /></PrivateRoute>} />
+        <Route path="/reviews/:id" element={ <PrivateRoute><MovieReviewPage /> </PrivateRoute>} />
+        <Route path="/tvshows/reviews/:id" element = {<PrivateRoute><TVReviewPage/></PrivateRoute>}/>
+        <Route path="/reviews/form" element={<PrivateRoute><AddMovieReviewPage/></PrivateRoute>} />
+        <Route path="/mustwatch" element={<PrivateRoute><MustWatchMovies/></PrivateRoute>} />
+        <Route path="/movies/upcoming/page=:pageNumber" element={<PrivateRoute><UpcomingMoviesPage /></PrivateRoute> } />
+        <Route path= "/movies/toprated/page=:pageNumber" element = {<PrivateRoute><TopRatedMoviesPage/></PrivateRoute>}/>
+        <Route path="/tvshows/page=:pageNumber" element = {<PrivateRoute><TVPage/></PrivateRoute>}/>
+        <Route path="/tvshows/:id" element = {<PrivateRoute><TVDetailsPage/></PrivateRoute>}/>
+        <Route path="/tvshows/toprated/page=:pageNumber" element={ <PrivateRoute><TopRatedTVPage /></PrivateRoute> } />
+        <Route path="/tvshows/favourites" element={ <PrivateRoute><FavouriteTVPage /> </PrivateRoute>} />
+        <Route path="/page=:pageNumber" element={<PrivateRoute><HomePage /></PrivateRoute>} />
+
         <Route path="/person/:id" element={<PersonDetailsPage/>}/>
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/about" element={<PrivateRoute><AboutPage /></PrivateRoute>} />
+        
+        
         <Route path="*" element={ <Navigate to="/login" /> } />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
               
       </TVContextProvider>
       </MoviesContextProvider>
       </AuthContextProvider>
       </>
-      ):(
-      <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="*" element={ <Navigate to="/login" /> } />
-      </Routes>)
-      }
+
     </BrowserRouter>
     <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
