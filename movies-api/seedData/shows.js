@@ -1,7 +1,6 @@
 const shows = [{
-    "page": 1,
-    "results": [
-        {
+
+        
             "backdrop_path": "/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
             "first_air_date": "2022-11-23",
             "genre_ids": [
@@ -394,9 +393,6 @@ const shows = [{
             "poster_path": "/jg7nEqNlgkFQxkSNcLlVn66LXjk.jpg",
             "vote_average": 2.9,
             "vote_count": 9
-        }
-    ],
-    "total_pages": 7094,
-    "total_results": 141878
+        
 }]
 export default shows

@@ -49,19 +49,19 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         <li>
           <Chip label="Genres" sx={chip} color="primary" />
         </li>
-        {movie.genres.map((g) => (
-          <li key={g.name}>
-            <Chip label={g.name} sx={chip} />
+        {movie.genre_ids.map((g) => (
+          <li key={g}>
+            <Chip label={g} sx={chip} />
           </li>
         ))}
       </Paper>
       <Paper component="ul" sx={root}>
       
-        <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} />
-        <Chip
+        {/* <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} /> */}
+        {/* <Chip
           icon={<MonetizationIcon />}
           label={`${movie.revenue.toLocaleString()}`}
-        />
+        /> */}
         <Chip
           icon={<StarRate />}
           label={`${movie.vote_average} (${movie.vote_count}`}

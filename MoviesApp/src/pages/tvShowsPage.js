@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { getTVShows } from "../api/tmdb-api";
+import { getTVShows } from "../api/movie-api";
 import PageTemplate from '../components/tvComponents/templateTVListPage';
 import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';

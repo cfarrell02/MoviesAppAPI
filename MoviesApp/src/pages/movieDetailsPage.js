@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import MovieDetails from "../components/movieComponents/movieDetails/";
 import PageTemplate from "../components/movieComponents/templateMoviePage";
 //import useMovie from "../hooks/useMovie";
-import { getMovie } from '../api/tmdb-api'
+import { getMovie } from '../api/movie-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
 

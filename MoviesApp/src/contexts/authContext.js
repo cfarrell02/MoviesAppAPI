@@ -17,6 +17,7 @@ const AuthContextProvider = (props) => {
 
   const authenticate = async (username, password) => {
     const result = await login(username, password);
+    if(result.code === 401 || !result.success) throw new Error(result.msg);
     if (result.token) {
       setToken(result.token)
       setIsAuthenticated(true);
@@ -26,8 +27,9 @@ const AuthContextProvider = (props) => {
 
   const register = async (username, password) => {
     const result = await signup(username, password);
-    console.log(result.code);
-    return (result.code == 201) ? true : false;
+    console.log(result);
+    if(result.code === 401 || !result.success) throw new Error(result.msg);
+    return (result.code === 201) ? true : false;
   };
 
   const signout = () => {

@@ -26,3 +26,22 @@ export const getMovies = () => {
     }
     ).then(res => res.json());
   };
+  export const getMovie = (args) => {
+    const [, idPart] = args.queryKey;
+    const { id } = idPart;
+    return fetch(
+        `/api/movies/${id}`,{headers: {
+            'Authorization': window.localStorage.getItem('token')
+            }
+            }
+    ).then(res => res.json());
+    };
+
+  export const getTVShows = () => {
+    return fetch(
+         '/api/tvshows',{headers: {
+              'Authorization': window.localStorage.getItem('token')
+              }
+            }
+    ).then(res => res.json());
+    };

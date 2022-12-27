@@ -18,14 +18,14 @@ const MoviesContextProvider = (props) => {
   const [fetchedReviews, setFetchedReviews] = useState(true);
 
   const firebaseFavourites  = async () => {
-      console.log(fetchedFavourites)
+
     if(fetchedFavourites){
 
     const data = await getFavourites(user.email);
  
   setFavourites(data.movies)
   setFetchedFavourites(false);
-  console.log(data)
+
     }
     
   }
