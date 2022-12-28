@@ -1,6 +1,65 @@
-const shows = [{
-
-        
+const shows = [
+        {
+            "backdrop_path": "/99vBORZixICa32Pwdwj0lWcr8K.jpg",
+            "first_air_date": "2021-09-03",
+            "genre_ids": [
+                10764
+            ],
+            "id": 130392,
+            "name": "The D'Amelio Show",
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "The D'Amelio Show",
+            "overview": "From relative obscurity and a seemingly normal life, to overnight success and thrust into the Hollywood limelight overnight, the D’Amelios are faced with new challenges and opportunities they could not have imagined.",
+            "popularity": 19.238,
+            "poster_path": "/phv2Jc4H8cvRzvTKb9X1uKMboTu.jpg",
+            "vote_average": 9,
+            "vote_count": 3153
+        },
+        {
+            "backdrop_path": "/84XPpjGvxNyExjSuLQe0SzioErt.jpg",
+            "first_air_date": "2008-01-20",
+            "genre_ids": [
+                18
+            ],
+            "id": 1396,
+            "name": "Breaking Bad",
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Breaking Bad",
+            "overview": "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+            "popularity": 357.735,
+            "poster_path": "/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+            "vote_average": 8.9,
+            "vote_count": 10667
+        },
+        {
+            "backdrop_path": "/rkB4LyZHo1NHXFEDHl9vSD9r1lI.jpg",
+            "first_air_date": "2021-11-06",
+            "genre_ids": [
+                16,
+                10765,
+                10759,
+                18
+            ],
+            "id": 94605,
+            "name": "Arcane",
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Arcane",
+            "overview": "Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.",
+            "popularity": 75.654,
+            "poster_path": "/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg",
+            "vote_average": 8.7,
+            "vote_count": 2779
+        },
+        {
             "backdrop_path": "/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
             "first_air_date": "2022-11-23",
             "genre_ids": [
@@ -16,383 +75,340 @@ const shows = [{
             "original_language": "en",
             "original_name": "Wednesday",
             "overview": "Wednesday Addams is sent to Nevermore Academy, a bizarre boarding school where she attempts to master her psychic powers, stop a monstrous killing spree of the town citizens, and solve the supernatural mystery that affected her family 25 years ago — all while navigating her new relationships.",
-            "popularity": 4716.638,
+            "popularity": 4641.497,
             "poster_path": "/9PFonBhy4cQy7Jz20NpMygczOkv.jpg",
-            "vote_average": 8.8,
-            "vote_count": 3914
+            "vote_average": 8.7,
+            "vote_count": 3995
         },
         {
-            "backdrop_path": null,
-            "first_air_date": "2005-09-05",
-            "genre_ids": [
-                18,
-                35
-            ],
-            "id": 36361,
-            "name": "The Street",
-            "origin_country": [
-                "CZ"
-            ],
-            "original_language": "cs",
-            "original_name": "Ulice",
-            "overview": "Ulice is a Czech soap opera produced and broadcast by Nova. In the Czech language Ulice means street.\n\nThe show describes the lives of the Farský, Jordán, Boháč, Nikl, and Liška families and many other people that live in Prague. Their daily battle against real problems of living in a modern world like divorce, love, betrayal and illness or disease. Ulice often shows crime.",
-            "popularity": 1657.347,
-            "poster_path": "/3ayWL13P1HeRnyVL9lU9flOdZjq.jpg",
-            "vote_average": 1.1,
-            "vote_count": 7
-        },
-        {
-            "backdrop_path": "/3FLHePl9Y3n4BidLVjIA9qSRDOE.jpg",
-            "first_air_date": "2021-08-03",
-            "genre_ids": [
-                10766
-            ],
-            "id": 130542,
-            "name": "Bhagya Lakshmi",
-            "origin_country": [
-                "IN"
-            ],
-            "original_language": "en",
-            "original_name": "Bhagya Lakshmi",
-            "overview": "Hailing from a middle-class family, Lakshmi’s life is upended when she realises that her marriage to Rishi Oberoi, an industrialist’s son, is a sham to keep his death at bay.",
-            "popularity": 1585.208,
-            "poster_path": "/7wuKrFvbX7kAIF0ctotARsqayPo.jpg",
-            "vote_average": 4.7,
-            "vote_count": 8
-        },
-        {
-            "backdrop_path": "/qcpC9lv6VLL4Zw45EveYELyje1w.jpg",
-            "first_air_date": "2020-10-05",
-            "genre_ids": [
-                18,
-                10766,
-                10751
-            ],
-            "id": 111453,
-            "name": "Ghum Hai Kisi Ke Pyaar Mein",
-            "origin_country": [
-                "IN"
-            ],
-            "original_language": "hi",
-            "original_name": "घुम है किसिकी प्यार में",
-            "overview": "Virat sacrifices his love to honour the promise he made to a dying man. Trapped between the past and the present, will he find love beyond the chains of duty?",
-            "popularity": 1487.546,
-            "poster_path": "/uNjnoT3RChs2r7O9pDyx7TNBvIj.jpg",
-            "vote_average": 5,
-            "vote_count": 11
-        },
-        {
-            "backdrop_path": "/1aQ0ETcIXFeC0uGcK7NvTg90zWi.jpg",
-            "first_air_date": "2022-08-22",
-            "genre_ids": [],
-            "id": 209326,
-            "name": "Rajjo",
-            "origin_country": [
-                "IN"
-            ],
-            "original_language": "nl",
-            "original_name": "Rajjo",
-            "overview": "",
-            "popularity": 1461.201,
-            "poster_path": "/rdNwXdMDVDvjOlcXCPOR3m9t43r.jpg",
-            "vote_average": 5.3,
-            "vote_count": 4
-        },
-        {
-            "backdrop_path": "/o8zk3QmHYMSC7UiJgFk81OFF1sc.jpg",
-            "first_air_date": "2022-08-22",
-            "genre_ids": [
-                10766,
-                18
-            ],
-            "id": 204095,
-            "name": "Mar do Sertão",
-            "origin_country": [
-                "BR"
-            ],
-            "original_language": "pt",
-            "original_name": "Mar do Sertão",
-            "overview": "",
-            "popularity": 1453.494,
-            "poster_path": "/ixgnqO8xhFMb1zr8RRFsyeZ9CdD.jpg",
-            "vote_average": 4.3,
-            "vote_count": 18
-        },
-        {
-            "backdrop_path": "/1UCGE1Dl7iClKIbDMcGWiHKVWCU.jpg",
-            "first_air_date": "2022-05-30",
-            "genre_ids": [
-                35,
-                10759,
-                10766
-            ],
-            "id": 197189,
-            "name": "Cara e Coragem",
-            "origin_country": [
-                "BR"
-            ],
-            "original_language": "pt",
-            "original_name": "Cara e Coragem",
-            "overview": "",
-            "popularity": 1348.924,
-            "poster_path": "/8CXbCCGiJxi4AXPBQ1QPrehMIGG.jpg",
-            "vote_average": 5.8,
-            "vote_count": 40
-        },
-        {
-            "backdrop_path": "/jANJGWIKavzyREXUMCHiXFzitDO.jpg",
-            "first_air_date": "2022-10-10",
-            "genre_ids": [
-                10766,
-                18
-            ],
-            "id": 204370,
-            "name": "Travessia",
-            "origin_country": [
-                "BR"
-            ],
-            "original_language": "pt",
-            "original_name": "Travessia",
-            "overview": "",
-            "popularity": 1303.987,
-            "poster_path": "/jFZJEoPzt2RKSsZG8QEWptX5Xyw.jpg",
-            "vote_average": 5.3,
-            "vote_count": 12
-        },
-        {
-            "backdrop_path": "/5NboRtvAKCU0KJGs5rXbw9deQf.jpg",
-            "first_air_date": "2021-10-27",
-            "genre_ids": [],
-            "id": 197109,
-            "name": "¿Cómo se llama esta relación?",
-            "origin_country": [
-                "US"
-            ],
-            "original_language": "en",
-            "original_name": "¿Cómo se llama esta relación?",
-            "overview": "The new stage of Yeh Rishta Kya Kehlata Hai will deal with the rivalry between sisters set within the premise of a love triangle. It will basically revolve around the story of two sisters, Akshara and Aarohi, and how they get entangled in a relationship with their love interest, Abhimanyu.",
-            "popularity": 1254.124,
-            "poster_path": "/6ZfiG4P7jivJV0wgcNMSiS2Owhh.jpg",
-            "vote_average": 6,
-            "vote_count": 2
-        },
-        {
-            "backdrop_path": "/wR3jtz2StAwocO9ANKP7ELUfkcW.jpg",
-            "first_air_date": "2022-05-30",
-            "genre_ids": [
-                18,
-                10751,
-                10766
-            ],
-            "id": 203887,
-            "name": "Banni Chow Home Delivery",
-            "origin_country": [
-                "IN"
-            ],
-            "original_language": "hi",
-            "original_name": "Banni Chow Home Delivery",
-            "overview": "Self-sufficient Banni runs her meal delivery service. However, her life turns upside down when she is tasked with feeding a rich but emotionally unstable Yuvan.",
-            "popularity": 1195.454,
-            "poster_path": "/lc75BdFIIrdgDjmj3nX0BU1Uyot.jpg",
-            "vote_average": 3.8,
-            "vote_count": 4
-        },
-        {
-            "backdrop_path": "/caGVr9Il2gj8bN4ow6qsLm60TxM.jpg",
-            "first_air_date": "2005-03-27",
-            "genre_ids": [
-                18
-            ],
-            "id": 1416,
-            "name": "Grey's Anatomy",
-            "origin_country": [
-                "US"
-            ],
-            "original_language": "en",
-            "original_name": "Grey's Anatomy",
-            "overview": "Follows the personal and professional lives of a group of doctors at Seattle’s Grey Sloan Memorial Hospital.",
-            "popularity": 1189.115,
-            "poster_path": "/daSFbrt8QCXV2hSwB0hqYjbj681.jpg",
-            "vote_average": 8.3,
-            "vote_count": 8718
-        },
-        {
-            "backdrop_path": "/t2rAdgjSh0WYbXzdOB5zTDqzdCI.jpg",
-            "first_air_date": "2022-11-02",
-            "genre_ids": [
-                18
-            ],
-            "id": 213713,
-            "name": "Faltu",
-            "origin_country": [
-                "IN"
-            ],
-            "original_language": "hi",
-            "original_name": "Faltu",
-            "overview": "What's in a name? Amidst the arid landscape of Rajasthan, a young woman with dreamy eyes struggles to prove her worth.",
-            "popularity": 1163.351,
-            "poster_path": "/lgyFuoXs7GvKJN0mNm7z7OMOFuZ.jpg",
-            "vote_average": 4.8,
-            "vote_count": 5
-        },
-        {
-            "backdrop_path": "/14V2f3C7YK4UfBh9pYMDOZJVFM1.jpg",
-            "first_air_date": "2022-10-12",
+            "backdrop_path": "/uGy4DCmM33I7l86W7iCskNkvmLD.jpg",
+            "first_air_date": "2013-12-02",
             "genre_ids": [
                 16,
-                10759,
+                35,
                 10765,
-                35
+                10759
             ],
-            "id": 114410,
-            "name": "Chainsaw Man",
+            "id": 60625,
+            "name": "Rick and Morty",
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Rick and Morty",
+            "overview": "Rick is a mentally-unbalanced but scientifically gifted old man who has recently reconnected with his family. He spends most of his time involving his young grandson Morty in dangerous, outlandish adventures throughout space and alternate universes. Compounded with Morty's already unstable family life, these events cause Morty much distress at home and school.",
+            "popularity": 774.809,
+            "poster_path": "/cvhNj9eoRBe5SxjCbQTkh05UP5K.jpg",
+            "vote_average": 8.7,
+            "vote_count": 7615
+        },
+        {
+            "backdrop_path": "/dJ8yrSokdTMnhKJw06MllSfCegb.jpg",
+            "first_air_date": "2019-01-12",
+            "genre_ids": [
+                16,
+                35,
+                18
+            ],
+            "id": 83121,
+            "name": "Kaguya-sama: Love Is War",
             "origin_country": [
                 "JP"
             ],
             "original_language": "ja",
-            "original_name": "チェンソーマン",
-            "overview": "Denji has a simple dream—to live a happy and peaceful life, spending time with a girl he likes. This is a far cry from reality, however, as Denji is forced by the yakuza into killing devils in order to pay off his crushing debts. Using his pet devil Pochita as a weapon, he is ready to do anything for a bit of cash.",
-            "popularity": 1097.294,
-            "poster_path": "/npdB6eFzizki0WaZ1OvKcJrWe97.jpg",
+            "original_name": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～",
+            "overview": "Considered a genius due to having the highest grades in the country, Miyuki Shirogane leads the prestigious Shuchiin Academy's student council as its president, working alongside the beautiful and wealthy vice president Kaguya Shinomiya. The two are often regarded as the perfect couple by students despite them not being in any sort of romantic relationship.",
+            "popularity": 71.756,
+            "poster_path": "/5khbC6AuNgnvnoDbjIMKCOhEtIc.jpg",
             "vote_average": 8.7,
-            "vote_count": 479
+            "vote_count": 570
         },
         {
-            "backdrop_path": "/hFFAYkK8XkvIlQss9GYxo8TOhFi.jpg",
-            "first_air_date": "2018-06-20",
+            "backdrop_path": "/nTvM4mhqNlHIvUkI1gVnW6XP7GG.jpg",
+            "first_air_date": "2019-04-06",
             "genre_ids": [
-                37,
-                18
+                16,
+                10765,
+                10759
             ],
-            "id": 73586,
-            "name": "Yellowstone",
+            "id": 85937,
+            "name": "Demon Slayer: Kimetsu no Yaiba",
             "origin_country": [
-                "US"
+                "JP"
             ],
-            "original_language": "en",
-            "original_name": "Yellowstone",
-            "overview": "Follow the violent world of the Dutton family, who controls the largest contiguous ranch in the United States. Led by their patriarch John Dutton, the family defends their property against constant attack by land developers, an Indian reservation, and America’s first National Park.",
-            "popularity": 1056.222,
-            "poster_path": "/peNC0eyc3TQJa6x4TdKcBPNP4t0.jpg",
-            "vote_average": 8.1,
-            "vote_count": 1330
+            "original_language": "ja",
+            "original_name": "鬼滅の刃",
+            "overview": "It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself. Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he can turn his sister back into a human, and kill the demon that massacred his family.",
+            "popularity": 78.087,
+            "poster_path": "/wrCVHdkBlBWdJUZPvnJWcBRuhSY.jpg",
+            "vote_average": 8.7,
+            "vote_count": 4604
         },
         {
-            "backdrop_path": "/qtFJ4PMvc4qEqD0dLrpNaXIlhKC.jpg",
-            "first_air_date": "2022-09-05",
-            "genre_ids": [
-                10764
-            ],
-            "id": 208711,
-            "name": "Een Jaar Van Je Leven",
-            "origin_country": [
-                "NL"
-            ],
-            "original_language": "nl",
-            "original_name": "Een Jaar Van Je Leven",
-            "overview": "",
-            "popularity": 1033.967,
-            "poster_path": "/97obFkhpMLrZcQEUCI69v55etNL.jpg",
-            "vote_average": 5.3,
-            "vote_count": 4
-        },
-        {
-            "backdrop_path": null,
-            "first_air_date": "2022-11-14",
-            "genre_ids": [
-                10759,
-                18
-            ],
-            "id": 211128,
-            "name": "The Iron Heart",
-            "origin_country": [
-                "PH"
-            ],
-            "original_language": "tl",
-            "original_name": "The Iron Heart",
-            "overview": "An undercover agent goes on a dangerous mission to bring down a crime ring. Fueled by a bitter and painful past, he along with his allies faces the grueling task that will challenge his resolve and strength.",
-            "popularity": 996.348,
-            "poster_path": "/91V6NI1JXCTDhaSSkoY7T87hk09.jpg",
-            "vote_average": 0,
-            "vote_count": 0
-        },
-        {
-            "backdrop_path": "/jLH03sLbkAGxrThdW6b2lrwwE4X.jpg",
-            "first_air_date": "2022-10-03",
+            "backdrop_path": "/70YdbMELM4b8x8VXjlubymb2bQ0.jpg",
+            "first_air_date": "2017-03-19",
             "genre_ids": [
                 18,
                 10751
             ],
-            "id": 211239,
-            "name": "The Love in Your Eyes",
+            "id": 70785,
+            "name": "Anne with an E",
+            "origin_country": [
+                "CA"
+            ],
+            "original_language": "en",
+            "original_name": "Anne with an E",
+            "overview": "A coming-of-age story about an outsider who, against all odds and numerous challenges, fights for love and acceptance and for her place in the world. The series centers on a young orphaned girl in the late 1890’s, who, after an abusive childhood spent in orphanages and the homes of strangers, is mistakenly sent to live with an elderly woman and her aging brother. Over time, 13-year-old Anne will transform their lives and eventually the small town in which they live with her unique spirit, fierce intellect and brilliant imagination.",
+            "popularity": 99.222,
+            "poster_path": "/6P6tXhjT5tK3qOXzxF9OMLlG7iz.jpg",
+            "vote_average": 8.7,
+            "vote_count": 4140
+        },
+        {
+            "backdrop_path": "/3ILMlmC30QUnYkY3XEBOyJ82Dqu.jpg",
+            "first_air_date": "2016-04-03",
+            "genre_ids": [
+                10759,
+                16
+            ],
+            "id": 65930,
+            "name": "My Hero Academia",
+            "origin_country": [
+                "JP"
+            ],
+            "original_language": "ja",
+            "original_name": "僕のヒーローアカデミア",
+            "overview": "In a world where eighty percent of the population has some kind of super-powered Quirk, Izuku was unlucky enough to be born completely normal. But that won't stop him from enrolling in a prestigious hero academy. Now, he'll get his first taste of brutal rivalry from other schools as he braves the cutthroat, no-holds-barred provisional license exam.",
+            "popularity": 99.799,
+            "poster_path": "/ivOLM47yJt90P19RH1NvJrAJz9F.jpg",
+            "vote_average": 8.7,
+            "vote_count": 4053
+        },
+        {
+            "backdrop_path": "/smSbK5cd8T9XHcxEUcems23BDEF.jpg",
+            "first_air_date": "2016-12-02",
+            "genre_ids": [
+                18,
+                10765,
+                35
+            ],
+            "id": 67915,
+            "name": "Goblin",
             "origin_country": [
                 "KR"
             ],
             "original_language": "ko",
-            "original_name": "내 눈에 콩깍지",
-            "overview": "Depicts the second love of a rogue daughter-in-law who appears in a 30-year-old gomtang restaurant, and a confident single mother Young Ih who says anything no matter what.\n\nJang Kyung Joon, who has the charm of a black-and-white man. Even though he shows the coolness of self-restraint from a large company that doesn't show his emotions easily, he shows both sides of being friendly in front of Lee Young Ih. Lee Young Ih, a single mother of steel mentality and a daughter-in-law with a bad attitude. She is sometimes angry, but she is a colorful charmer full of justice. Kim Hae Mi, her mother's daughter who has both her work and love in her hands, and Jang Kyung Joon's fiancée. It forms a tense rivalry with Bae Nouri. Jang Se Joon, the half-brother of Jang Kyung Joon, who has a friendly personality.",
-            "popularity": 980.259,
-            "poster_path": "/gJnVJ3l4p1GDvGpwFedXhAJG3qE.jpg",
-            "vote_average": 3.5,
-            "vote_count": 2
+            "original_name": "쓸쓸하고 찬란하神-도깨비",
+            "overview": "In his quest for a bride to break his immortal curse, a 939-year-old guardian of souls meets a grim reaper and a sprightly student with a tragic past.",
+            "popularity": 123.428,
+            "poster_path": "/c2gon6zbqzL73DOl8mPQMMUJXvE.jpg",
+            "vote_average": 8.7,
+            "vote_count": 2402
         },
         {
-            "backdrop_path": "/yzGsJoGtsFk98VELx4sId3GeG5Z.jpg",
-            "first_air_date": "2022-09-05",
+            "backdrop_path": "/790rH1ByeDJg6VPwBFxdzxHRepI.jpg",
+            "first_air_date": "2019-04-06",
             "genre_ids": [
+                16,
+                35
+            ],
+            "id": 85990,
+            "name": "Hitoribocchi no Marumaruseikatsu",
+            "origin_country": [
+                "JP"
+            ],
+            "original_language": "ja",
+            "original_name": "ひとりぼっちの○○生活",
+            "overview": "Hitori Bocchi suffers from extreme social anxiety, she's not good at talking to people, takes pretty extreme actions, is surprisingly adept at avoiding people, her legs cramp when she overexerts herself, gets full of herself when alone, will vomit when exposed to extreme tension and often comes up with plans. Now she is entering middle school and her only friend, Yawara Kai, is attending a different school. This leaves Bocchi alone, surrounded by new classmates with whom she must make friends before Kai will talk to her again.",
+            "popularity": 13.72,
+            "poster_path": "/btoTzCw3zmjRtB99g2M5Mw2GUQG.jpg",
+            "vote_average": 8.7,
+            "vote_count": 127
+        },
+        {
+            "backdrop_path": "/4Mt7WHox67uJ1yErwTBFcV8KWgG.jpg",
+            "first_air_date": "1999-10-20",
+            "genre_ids": [
+                10759,
+                35,
+                16
+            ],
+            "id": 37854,
+            "name": "One Piece",
+            "origin_country": [
+                "JP"
+            ],
+            "original_language": "ja",
+            "original_name": "ワンピース",
+            "overview": "Years ago, the fearsome Pirate King, Gol D. Roger was executed leaving a huge pile of treasure and the famous \"One Piece\" behind. Whoever claims the \"One Piece\" will be named the new King of the Pirates.\n\nMonkey D. Luffy, a boy who consumed a \"Devil Fruit,\" decides to follow in the footsteps of his idol, the pirate Shanks, and find the One Piece. It helps, of course, that his body has the properties of rubber and that he's surrounded by a bevy of skilled fighters and thieves to help him along the way.\n\nLuffy will do anything to get the One Piece and become King of the Pirates!",
+            "popularity": 112.38,
+            "poster_path": "/e3NBGiAifW9Xt8xD5tpARskjccO.jpg",
+            "vote_average": 8.7,
+            "vote_count": 3462
+        },
+        {
+            "backdrop_path": "/2UG177tWHy7xRmMKWJHB7nAUmKd.jpg",
+            "first_air_date": "2009-04-05",
+            "genre_ids": [
+                10759,
+                16,
+                10765
+            ],
+            "id": 31911,
+            "name": "Fullmetal Alchemist: Brotherhood",
+            "origin_country": [
+                "JP"
+            ],
+            "original_language": "ja",
+            "original_name": "鋼の錬金術師 FULLMETAL ALCHEMIST",
+            "overview": "Edward and Alphonse Elric's reckless disregard for alchemy's fun­damental laws ripped half of Ed's limbs from his body and left Al's soul clinging to a cold suit of armor. To restore what was lost, the brothers scour a war-torn land for the Philosopher's Sto­ne, a fabled relic which grants the ability to perform alchemy in impossible ways.\n\nThe Elrics are not alone in their search; the corrupt State Military is also eager to harness the artifact's power. So too are the strange Homunculi and their shadowy creator. The mythical gem lures exotic alchemists from distant kingdoms, scarring some deeply enough to inspire murder. As the Elrics find their course altered by these enemies and allies, their purpose remains unchanged – and their bond unbreakable.",
+            "popularity": 65.889,
+            "poster_path": "/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg",
+            "vote_average": 8.7,
+            "vote_count": 1513
+        },
+        {
+            "backdrop_path": "/6UH52Fmau8RPsMAbQbjwN3wJSCj.jpg",
+            "first_air_date": "2021-03-25",
+            "genre_ids": [
+                16,
+                10765,
+                10759,
                 18
             ],
-            "id": 209609,
-            "name": "Abot-Kamay Na Pangarap",
-            "origin_country": [
-                "PH"
-            ],
-            "original_language": "tl",
-            "original_name": "Abot-Kamay Na Pangarap",
-            "overview": "Analyn is a genius who was born poor and raised by her illiterate and sickly mother. She graduates from high school at the age of 12 and dreams of becoming a doctor in order to help the less privileged. She graduates from med school at 19 years old and becomes the youngest surgical resident in a large hospital. Despite her achievements, she has to deal with bullying and competition from her fellow doctors, who are threatened by her age and intelligence. She soon finds herself in an emotional crisis which forces her to leave her profession indefinitely. She returns to the hospital when she learns that she is the only doctor skilled enough to save her father from a rare brain disease.",
-            "popularity": 977.316,
-            "poster_path": "/lVscJEjy2KMkyz5RdeOtmhaiYJk.jpg",
-            "vote_average": 0,
-            "vote_count": 0
-        },
-        {
-            "backdrop_path": "/o5GsA1G5YEruuUNOYvWjlArIC37.jpg",
-            "first_air_date": "2022-09-19",
-            "genre_ids": [
-                10766
-            ],
-            "id": 210506,
-            "name": "Sangue Oculto",
-            "origin_country": [
-                "PT"
-            ],
-            "original_language": "pt",
-            "original_name": "Sangue Oculto",
-            "overview": "",
-            "popularity": 973.335,
-            "poster_path": "/myCEG6C5Nk181jXzBek5MQEXpM2.jpg",
-            "vote_average": 4,
-            "vote_count": 2
-        },
-        {
-            "backdrop_path": "/xfUnkXXSP2E2zssvI2Ux0PGn3Yu.jpg",
-            "first_air_date": "2022-10-03",
-            "genre_ids": [
-                10763,
-                10767
-            ],
-            "id": 211660,
-            "name": "Cuomo",
+            "id": 95557,
+            "name": "Invincible",
             "origin_country": [
                 "US"
             ],
             "original_language": "en",
-            "original_name": "Cuomo",
-            "overview": "A no-nonsense show featuring the day’s most important news from all perspectives.",
-            "popularity": 896.185,
-            "poster_path": "/jg7nEqNlgkFQxkSNcLlVn66LXjk.jpg",
-            "vote_average": 2.9,
-            "vote_count": 9
-        
-}]
+            "original_name": "Invincible",
+            "overview": "Mark Grayson is a normal teenager except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father’s tutelage.",
+            "popularity": 53.509,
+            "poster_path": "/yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg",
+            "vote_average": 8.7,
+            "vote_count": 3327
+        },
+        {
+            "backdrop_path": "/bhF63Jd90gRYyTHd4y5GCGA2vX6.jpg",
+            "first_air_date": "2010-09-06",
+            "genre_ids": [
+                16,
+                35
+            ],
+            "id": 31132,
+            "name": "Regular Show",
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Regular Show",
+            "overview": "Two bored groundskeepers, Mordecai (a six-foot-tall blue jay) and Rigby (a hyperactive raccoon) are best friends who spend their days trying to entertain themselves by any means necessary, much to the displeasure of their boss. Their everyday pursuits often lead to things spiraling out of control and into the surreal.",
+            "popularity": 171.007,
+            "poster_path": "/mS5SLxMYcKfUxA0utBSR5MOAWWr.jpg",
+            "vote_average": 8.7,
+            "vote_count": 1616
+        },
+        {
+            "backdrop_path": "/tKh3pc5MEjCIGV7hSJX76qi8aGA.jpg",
+            "first_air_date": "2018-01-13",
+            "genre_ids": [
+                16
+            ],
+            "id": 76121,
+            "name": "DARLING in the FRANXX",
+            "origin_country": [
+                "JP"
+            ],
+            "original_language": "ja",
+            "original_name": "ダーリン・イン・ザ・フランキス",
+            "overview": "The story is set in the distant future. The land is ruined, and humanity establishes the mobile fort city Plantation. Pilots produced inside Plantation live in Mistilteinn, also know as the \"birdcage.\" Children live there knowing nothing of the outside world or the freedom of the sky. Their lives consist of battling to carry out missions. Their enemies are mysterious giant lifeforms known as Kyouryuu, and the children pilot robots called Franxx to face off against them. For the children, riding the Franxx proves their existence.\n\nA boy named Hiro is called Code:016, and he was once known as a prodigy. However, he has fallen behind, and his existence seems unnecessary. Not piloting a Franxx is the same as ceasing to exist. One day, a mysterious girl known as \"Zero Two\" appears before him. Two horns grow out of her head.",
+            "popularity": 65.18,
+            "poster_path": "/yyUxeNpQoD23XWEdPXLJRGQEtHT.jpg",
+            "vote_average": 8.7,
+            "vote_count": 1634
+        },
+        {
+            "backdrop_path": "/fXME4R2kk306okBGnFQDttTdKdk.jpg",
+            "first_air_date": "2009-11-28",
+            "genre_ids": [
+                10751,
+                35
+            ],
+            "id": 31356,
+            "name": "Big Time Rush",
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Big Time Rush",
+            "overview": "Four teenage friends move from Minneapolis to Los Angeles to form a potential chart-topping boy band after Kendall is inadvertently discovered by an eccentric record executive, Gustavo Rocque. As they seize this opportunity of a lifetime, these friends embark on an exciting comedy and music-filled journey to prove to themselves and their record label that they are serious about their new career choice.",
+            "popularity": 44.35,
+            "poster_path": "/fERf3WFpKEHRil2CCX87ubsQRZ9.jpg",
+            "vote_average": 8.7,
+            "vote_count": 1490
+        },
+        {
+            "backdrop_path": "/fCz519JJeXEtMfR4CmM9tR7rZOB.jpg",
+            "first_air_date": "2022-04-14",
+            "genre_ids": [
+                10764
+            ],
+            "id": 154521,
+            "name": "The Kardashians",
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "The Kardashians",
+            "overview": "The family you know and love is here with a brand new series, giving an all-access pass into their lives. Kris, Kourtney, Kim, Khloé, Kendall, and Kylie bring the cameras back to reveal the truth behind the headlines. From the intense pressures of running billion-dollar businesses to the hilarious joys of playtime and school drop-offs, this series brings viewers into the fold with a rivetingly honest story of love & life in the spotlight.",
+            "popularity": 89.597,
+            "poster_path": "/ntLiiyI2AVIVAtVKwUYqi36e3bM.jpg",
+            "vote_average": 8.7,
+            "vote_count": 1797
+        },
+        {
+            "backdrop_path": "/cHyY5z4txdVyGtYMvBJhCqCcJso.jpg",
+            "first_air_date": "2020-01-10",
+            "genre_ids": [
+                16,
+                10765,
+                10751,
+                10759,
+                35
+            ],
+            "id": 92685,
+            "name": "The Owl House",
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "The Owl House",
+            "overview": "An animated fantasy-comedy series that follows Luz, a self-assured teenage girl who accidentally stumbles upon a portal to a magical world where she befriends a rebellious witch, Eda, and an adorably tiny warrior, King. Despite not having magical abilities, Luz pursues her dream of becoming a witch by serving as Eda's apprentice at the Owl House and ultimately finds a new family in an unlikely setting.",
+            "popularity": 105.429,
+            "poster_path": "/rhzwpJBhi2WkfihXndS1xUdQlzB.jpg",
+            "vote_average": 8.7,
+            "vote_count": 1239
+        },
+        {
+            "backdrop_path": "/s6k1teuMVH01038PhjpvgX4dmht.jpg",
+            "first_air_date": "2016-11-16",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "id": 68349,
+            "name": "Weightlifting Fairy Kim Bok-Joo",
+            "origin_country": [
+                "KR"
+            ],
+            "original_language": "ko",
+            "original_name": "역도요정 김복주",
+            "overview": "A spunky female weightlifter and free-spirited male swimmer meet on campus, only to find out their pasts may be intertwined.",
+            "popularity": 67.57,
+            "poster_path": "/kyZKEtDNBS5S3ZobqJssdhUYUfv.jpg",
+            "vote_average": 8.7,
+            "vote_count": 663
+        }
+    ]
 export default shows

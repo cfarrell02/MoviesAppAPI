@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import PageTemplate from "../components/tvComponents/templateTVListPage";
 import { TVContext } from "../contexts/tvContext";
 import { useQueries } from "react-query";
-import { getTVShow } from "../api/tmdb-api";
+import { getTVShow } from "../api/movie-api";
 import Spinner from '../components/spinner';
 import RemoveFromFavouritesTV from "../components/cardIcons/removeFromFavouritesTV";
 import WriteReview from "../components/cardIcons/writeReview";

@@ -45,3 +45,13 @@ export const getMovies = () => {
             }
     ).then(res => res.json());
     };
+    export const getTVShow = (args) => {
+        const [, idPart] = args.queryKey;
+        const { id } = idPart;
+        return fetch(
+             `/api/tvshows/${id}`,{headers: {
+                  'Authorization': window.localStorage.getItem('token')
+                  }
+                }
+        ).then(res => res.json());
+        };

@@ -38,8 +38,8 @@ const TVDetails = ({ TV }) => {  // Don't miss this!
       <Typography variant="h5" component="h3">
         Overview 
       </Typography>
-      {TV.in_production ? <Chip label ={ `In Production`} icon = { <CheckCircleOutlineIcon/>} color = "primary"/>:
-      <Chip label ={ `Ended on ${TV.last_air_date}`} icon = { <CancelIcon/>} color = "secondary"/>}
+      {/* {TV.in_production ? <Chip label ={ `In Production`} icon = { <CheckCircleOutlineIcon/>} color = "primary"/>:
+      <Chip label ={ `Ended on ${TV.last_air_date}`} icon = { <CancelIcon/>} color = "secondary"/>} */}
 
       <Typography variant="h6" component="p">
         {TV.overview}
@@ -53,15 +53,15 @@ const TVDetails = ({ TV }) => {  // Don't miss this!
         <li>
           <Chip label="Genres" sx={chip} color="primary" />
         </li>
-        {TV.genres.map((g) => (
-          <li key={g.name}>
-            <Chip label={g.name} sx={chip} />
+        {TV.genre_ids.map((g) => (
+          <li key={g}>
+            <Chip label={g} sx={chip} />
           </li>
         ))}
       </Paper>
       <Paper component="ul" sx={root}>
       
-        <Chip icon={<AccessTimeIcon />} label={`${TV.episode_run_time} min.`} />
+        {/* <Chip icon={<AccessTimeIcon />} label={`${TV.episode_run_time} min.`} /> */}
         <Chip
           icon={<VisibilityIcon />}
           label={`${TV.popularity.toLocaleString()}`}
@@ -71,7 +71,7 @@ const TVDetails = ({ TV }) => {  // Don't miss this!
           label={`${TV.vote_average} (${TV.vote_count})`}
         />
         <Chip label={`First Aired In: ${TV.first_air_date}`} />
-        <Chip label={`Most Recent Air Date: ${TV.last_air_date}`} />
+        {/* <Chip label={`Most Recent Air Date: ${TV.last_air_date}`} /> */}
       </Paper>
       <Paper 
         component="ul" 
@@ -80,9 +80,9 @@ const TVDetails = ({ TV }) => {  // Don't miss this!
         <li>
           <Chip label="Production Countries" sx={chip} color="primary" />
         </li>
-        {TV.production_countries.map((c) => (
-          <li key={c.name}>
-            <Chip label={c.name} sx={chip} />
+        {TV.origin_country.map((c) => (
+          <li key={c._id}>
+            <Chip label={`${c}`} sx={chip} />
           </li>
         ))}
       </Paper>

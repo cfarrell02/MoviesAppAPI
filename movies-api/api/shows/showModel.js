@@ -28,7 +28,7 @@ const ShowSchema = new Schema({
   }]
 });
 
-ShowSchema.statics.findByMovieDBId = function (id) {
+ShowSchema.statics.findByShowDBId = function (id) {
   return this.findOne({id });
 };
 
