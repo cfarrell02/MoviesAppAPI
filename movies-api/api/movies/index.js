@@ -4,15 +4,24 @@ import uniqid from 'uniqid';
 import movieModel from './movieModel';
 import asyncHandler from 'express-async-handler';
 import {
-    getUpcomingMovies
+    getUpcomingMovies, getTopRatedMovies, getMovieDetails, getMovieCredits, getMovieReviews
   } from '../tmdb-api';
 
 const router = express.Router();
 
 router.get('/tmdb/upcoming', asyncHandler( async(req, res) => {
-    const upcomingMovies = await getUpcomingMovies();
+    let { page = 1, limit = 10 } = req.query; // destructure page and limit and set default values
+    [page, limit] = [+page, +limit]; //trick to convert to numeric (req.query will contain string values)
+    const upcomingMovies = await getUpcomingMovies(page);
     res.status(200).json(upcomingMovies);
   }));
+
+  router.get('/tmdb/toprated', asyncHandler( async(req, res) => {
+    let { page = 1, limit = 10 } = req.query;
+    [page, limit] = [+page, +limit]; 
+    const topRatedMovies = await getTopRatedMovies(page);
+    res.status(200).json(topRatedMovies);
+    }));
 
 router.get('/', asyncHandler(async (req, res) => {
     let { page = 1, limit = 10 } = req.query; // destructure page and limit and set default values

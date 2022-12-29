@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Link } from "react-router-dom";
-import { getPersonTV } from "../../../api/tmdb-api";
+import { getPersonTV } from "../../../api/movie-api";
 import Avatar from "@mui/material/Avatar";
 import { excerpt } from "../../../util";
 import { Typography, Divider } from "@mui/material";

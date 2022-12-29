@@ -3,9 +3,12 @@ import express from 'express';
 import uniqid from 'uniqid';
 import personModel from './personModel';
 import asyncHandler from 'express-async-handler';
+import { getPerson , getPersonMovies, getPersonTV} from '../tmdb-api';
 
 
 const router = express.Router();
+
+
 
 router.get('/', asyncHandler(async (req, res) => {
     let { page = 1, limit = 10 } = req.query; // destructure page and limit and set default values
@@ -24,12 +27,32 @@ router.get('/', asyncHandler(async (req, res) => {
 
 router.get('/:id', asyncHandler(async (req, res) => {
     const id = parseInt(req.params.id);
-    const show = await personModel.findByShowDBId(id);
+    const show = await personModel.findByPersonDBId(id);
     if (show) {
         res.status(200).json(show);
     } else {
         res.status(404).json({message: 'The resource you requested could not be found.', status_code: 404});
     }
 }));
+
+router.get('/tmdb/:id/movie_credits', asyncHandler( async(req, res) => {
+    const id = parseInt(req.params.id);
+    const personMovies = await getPersonMovies(id);
+    res.status(200).json(personMovies);
+    }));
+
+router.get('/tmdb/:id/tv_credits', asyncHandler( async(req, res) => {
+    const id = parseInt(req.params.id);
+    const personTV = await getPersonTV(id);
+    res.status(200).json(personTV);
+    }));
+
+
+
+router.get('/tmdb/:id', asyncHandler( async(req, res) => {
+    const id = parseInt(req.params.id);
+    const topRatedTVShows = await getPerson(id);
+    res.status(200).json(topRatedTVShows);
+    }));
 
 export default router;
