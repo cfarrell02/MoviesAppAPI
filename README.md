@@ -4,8 +4,6 @@ Name: Cian Farrell
 
 ## Features.
 
-[A bullet-point list of the ADDITIONAL features/endpoints you have implemented in the API **THAT WERE NOT IN THE LABS** ]. 
-
 
  + All Previous TMDB Calls routed through new API - This includes, toprated movie and tv shows, upcoming tv shows, actors, movie/show credits, actor details/credits and db searching.
  + TV Shows - TVShows have been added to the API.
