@@ -4,7 +4,7 @@ import uniqid from 'uniqid';
 import movieModel from './movieModel';
 import asyncHandler from 'express-async-handler';
 import {
-    getUpcomingMovies, getTopRatedMovies, getMovieDetails, getMovieCredits, getMovieReviews
+    getUpcomingMovies, getTopRatedMovies,getMovieImages, getSimilarMovies, getMovieCredits
   } from '../tmdb-api';
 
 const router = express.Router();
@@ -15,6 +15,23 @@ router.get('/tmdb/upcoming', asyncHandler( async(req, res) => {
     const upcomingMovies = await getUpcomingMovies(page);
     res.status(200).json(upcomingMovies);
   }));
+
+  router.get('/tmdb/:id/credits', asyncHandler( async(req, res) => {
+    const id = parseInt(req.params.id);
+    const movieCredits = await getMovieCredits(id);
+    res.status(200).json(movieCredits);
+    }));
+    router.get('/tmdb/:id/similar', asyncHandler( async(req, res) => {
+    const id = parseInt(req.params.id);
+    const similarMovies = await getSimilarMovies(id);
+    res.status(200).json(similarMovies);
+    }));
+
+  router.get('/tmdb/movieimages/:id', asyncHandler( async(req, res) => {
+    const id = parseInt(req.params.id);
+    const movieImages = await getMovieImages(id);
+    res.status(200).json(movieImages);
+    }));
 
   router.get('/tmdb/toprated', asyncHandler( async(req, res) => {
     let { page = 1, limit = 10 } = req.query;
@@ -52,6 +69,7 @@ router.get('/:id', asyncHandler(async (req, res) => {
 router.get('/:id/reviews', (req, res) => {
     const id = parseInt(req.params.id);
     if(movieReviews.id == id){
+        console.log(movieReviews);
         res.status(200).json(movieReviews);
     }else{
         res.status(404).json ({

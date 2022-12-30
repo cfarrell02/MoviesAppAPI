@@ -9,7 +9,7 @@ import Fab from "@mui/material/Fab";
 import Box from "@mui/material/Box";
 import Footer from "../footerMovie";
 import {MoviesContext} from "../../../contexts/moviesContext";
-import {getMovieSearchResults} from '../../../api/tmdb-api'
+
 import { useQuery } from "react-query";
 
 function MovieListPageTemplate({ movies, title, action }) {

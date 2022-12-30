@@ -9,7 +9,7 @@ import CardMedia from "@mui/material/CardMedia";
 import CardHeader from "@mui/material/CardHeader";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { getMovieCredits } from "../../../api/tmdb-api";
+import { getMovieCredits } from "../../../api/movie-api";
 import img from '../../../images/film-poster-placeholder.png';
 import { Link } from "react-router-dom";
 

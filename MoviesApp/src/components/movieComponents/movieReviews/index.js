@@ -7,29 +7,23 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Link } from "react-router-dom";
-import { getMovieReviews } from "../../../api/tmdb-api";
+import { getMovieReviews } from "../../../api/movie-api";
 import { MoviesContext } from "../../../contexts/moviesContext";
 import { excerpt } from "../../../util";
 
 export default function MovieReviews({ movie }) {
   const [reviews, setReviews] = useState([]);
-   const {myReviews} = useContext(MoviesContext);
-   console.log('2222')
-   console.log(myReviews);
-  var thisReviews = myReviews.filter((r) => r.movieId === movie.id);
-  console.log('3333')
-  console.log(thisReviews);
   useEffect(() => {
-    getMovieReviews(movie.id).then((reviews2) => {
-      let reviews3 = reviews2;
-      if(thisReviews.length>0){
-      reviews3 = reviews2.concat(thisReviews);}
-      setReviews(reviews3);
+    console.log(movie.id)
+    getMovieReviews(movie.id).then((rev) => {
+      setReviews(rev);
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const results = reviews.results ? reviews.results : [];
+
   return (
+    reviews.status_code === 404 ? ( <h1> No Reviews Found </h1>):
     <TableContainer component={Paper}>
       <Table sx={{minWidth: 550}} aria-label="reviews table">
         <TableHead>
@@ -40,7 +34,7 @@ export default function MovieReviews({ movie }) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {reviews.map((r) => (
+          {results.map((r) => (
             <TableRow key={r.id}>
               <TableCell component="th" scope="row">
                 {r.author}

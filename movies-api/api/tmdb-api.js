@@ -94,9 +94,8 @@ export const getPerson= (id) => {
       throw error
    });
   };
-  export const getMovieImages = ({ queryKey }) => {
-    const [, idPart] = queryKey;
-    const { id } = idPart;
+  export const getMovieImages = (id) => {
+
     return fetch(
       `https://api.themoviedb.org/3/movie/${id}/images?api_key=${process.env.TMDB_KEY}`
     ).then( (response) => {
@@ -110,9 +109,8 @@ export const getPerson= (id) => {
       throw error
    });
   };
-  export const getTVImages = ({ queryKey }) => {
-    const [, idPart] = queryKey;
-    const { id } = idPart;
+  export const getTVImages = (id) => {
+
     return fetch(
       `https://api.themoviedb.org/3/tv/${id}/images?api_key=${process.env.TMDB_KEY}`
     ).then( (response) => {

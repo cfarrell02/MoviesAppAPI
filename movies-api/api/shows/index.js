@@ -3,7 +3,7 @@ import express from 'express';
 import uniqid from 'uniqid';
 import showModel from './showModel';
 import asyncHandler from 'express-async-handler';
-import { getTopRatedTVShows } from '../tmdb-api';
+import { getTopRatedTVShows, getTVImages, getTVCredits, getSimilarTVShows, getTVReviews} from '../tmdb-api';
 
 const router = express.Router();
 
@@ -12,6 +12,30 @@ router.get('/tmdb/toprated', asyncHandler( async(req, res) => {
     [page, limit] = [+page, +limit]; 
     const topRatedTVShows = await getTopRatedTVShows(page);
     res.status(200).json(topRatedTVShows);
+    }));
+
+router.get('/tmdb/:id/credits', asyncHandler( async(req, res) => {
+    const id = parseInt(req.params.id);
+    const tvShowCredits = await getTVCredits(id);
+    res.status(200).json(tvShowCredits);
+    }));
+
+router.get('/tmdb/:id/reviews', asyncHandler( async(req, res) => {
+    const id = parseInt(req.params.id);
+    const tvShowReviews = await getTVReviews(id);
+    res.status(200).json(tvShowReviews);
+    }));
+
+
+router.get('/tmdb/tvshowimages/:id', asyncHandler( async(req, res) => {
+    const id = parseInt(req.params.id);
+    const tvShowImages = await getTVImages(id);
+    res.status(200).json(tvShowImages);
+    }));
+router.get('/tmdb/:id/similar', asyncHandler( async(req, res) => {
+    const id = parseInt(req.params.id);
+    const similarTVShows = await getSimilarTVShows(id);
+    res.status(200).json(similarTVShows);
     }));
 
 router.get('/', asyncHandler(async (req, res) => {

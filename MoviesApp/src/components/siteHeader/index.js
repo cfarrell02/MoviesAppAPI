@@ -16,7 +16,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Avatar from '@mui/material/Avatar';
-import { getSearchResults } from "../../api/tmdb-api";
+import { getSearchResults } from "../../api/movie-api";
 import Box from '@mui/material/Box';
 import TheatersIcon from '@mui/icons-material/Theaters';
 import { AuthContext } from "../../contexts/authContext";
@@ -55,7 +55,7 @@ const SiteHeader = ({ history }) => {
       { title: "Movies"},
       { label: "Discover", path: "/page=1" },
       { label: "Upcoming", path: "/movies/upcoming/page=1" },
-      { label: "Favourites", path: "/movies/favourites" },
+      // { label: "Favourites", path: "/movies/favourites" },
       { label: "Must Watch", path: "/mustwatch" },
       { label: "Top Rated", path: "/movies/toprated/page=1" }
     ],
@@ -63,7 +63,7 @@ const SiteHeader = ({ history }) => {
       { title: "TV Shows"},
       { label: "Discover", path: "/tvshows/page=1" },
       { label: "Top Rated", path: "/tvshows/toprated/page=1"},
-      { label: "Favourites", path: "/tvshows/favourites" }
+      // { label: "Favourites", path: "/tvshows/favourites" }
     ]
   ]
 

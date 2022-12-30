@@ -90,12 +90,12 @@ export const movies = {
 };
 
 export const movieReviews = {
-    "id": 527774,
+    "id": 577922,
     "page": 1,
     "results": [
         {
             "author": "ted",
-            "content": "In a magical land known as Kumandra....",
+            "content": "I loved this....",
             "created_at": "2021-03-01T17:10:51.977Z",
             "id": "603d201b33a533004bd1906e",
             "updated_at": "2021-03-07T15:46:34.342Z"

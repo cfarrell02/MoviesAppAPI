@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Link } from "react-router-dom";
-import { getTVReviews } from "../../../api/tmdb-api";
+import { getTVReviews } from "../../../api/movie-api";
 import { excerpt } from "../../../util";
 
 export default function TVReviews({ TV }) {

@@ -4,6 +4,7 @@ import moviesRouter from './api/movies';
 import showsRouter from './api/shows';
 import genresRouter from './api/genres';
 import peopleRouter from './api/persons';
+import searchRouter from './api/search';
 import session from 'express-session';
 import passport from './authenticate';
 import './seedData';
@@ -35,6 +36,7 @@ app.use(passport.initialize());
 app.use('/api/movies', passport.authenticate('jwt', {session: false}), moviesRouter);
 app.use('/api/tvshows', passport.authenticate('jwt', {session: false}), showsRouter);
 app.use('/api/people', passport.authenticate('jwt', {session: false}), peopleRouter);
+app.use('/api/search', passport.authenticate('jwt', {session: false}), searchRouter);
 app.use('/api/genres', genresRouter);
 app.use('/api/users', usersRouter);
 

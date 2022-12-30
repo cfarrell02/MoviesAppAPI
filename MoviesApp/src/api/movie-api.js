@@ -128,3 +128,97 @@ export const getMovies = () => {
 
     ).then(res => res.json());
     };
+
+  export const getMovieImages = ({queryKey}) => {
+    const [, idPart] = queryKey;
+    const { id } = idPart;
+    return fetch(
+        `/api/movies/tmdb/movieimages/${id}`,{headers: {
+            'Authorization': window.localStorage.getItem('token')
+            }
+            }
+    ).then(res => res.json());
+    };
+    export const getTVImages = ({queryKey}) => {
+      const [, idPart] = queryKey;
+      const { id } = idPart;
+      return fetch(
+          `/api/tvshows/tmdb/tvshowimages/${id}`,{headers: {
+              'Authorization': window.localStorage.getItem('token')
+              }
+              }
+      ).then(res => res.json());
+      };
+
+  export const getMovieCredits = (id) => {
+
+    return fetch(
+        `/api/movies/tmdb/${id}/credits`,{headers: {
+            'Authorization': window.localStorage.getItem('token')
+            }
+            }
+    ).then(res => res.json());
+    };
+    export const getTVCredits = (id) => {
+
+      return fetch(
+          `/api/tvshows/tmdb/${id}/credits`,{headers: {
+              'Authorization': window.localStorage.getItem('token')
+              }
+              }
+      ).then(res => res.json());
+      }
+    export const getSimilarMovies = (id) => {
+        
+        return fetch(
+            `/api/movies/tmdb/${id}/similar`,{headers: {
+                'Authorization': window.localStorage.getItem('token')
+                }
+                }
+        ).then(res => res.json());
+        }
+    export const getSimilarTVShows = (id) => {    
+        return fetch(
+            `/api/tvshows/tmdb/${id}/similar`,{headers: {
+                'Authorization': window.localStorage.getItem('token')
+                }
+                }
+        ).then(res => res.json());
+        }
+
+
+        export const getMovieReviews = (id) => {
+            console.log(id)
+            return fetch(
+              `/api/movies/${id}/reviews`,{headers: {
+
+                'Authorization': window.localStorage.getItem('token')
+                }
+                }
+            )
+              .then((res) => {return res.json()})
+          };
+
+          export const getTVReviews = (id) => {
+            console.log(id)
+            return fetch(
+              `/api/tvshows/tmdb/${id}/reviews`,{headers: {
+
+                'Authorization': window.localStorage.getItem('token')
+                }
+                }
+            )
+              .then((res) => {return res.json()})
+          };
+
+          export const getSearchResults = (pageNum,searchTerm) => {
+            return fetch(
+              `/api/search/?page=${pageNum}&query=${searchTerm}`,{
+                headers: {
+                    'Authorization': window.localStorage.getItem('token')
+                }
+                }
+            ).then((response) => { 
+               return response.json() 
+            })
+          };
