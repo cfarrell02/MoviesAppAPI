@@ -28,26 +28,28 @@ seedDb=true
 secret=YourJWTSecret
 ```
 
-
 ## API Design
-Give an overview of your web API design, perhaps similar to the following: 
 
 |  |  GET | POST | PUT | DELETE
 | -- | -- | -- | -- | -- 
-| /api/movies |Gets a list of movies | N/A | N/A |
+| /api/movies |Gets a list of movies | N/A | N/A | N/A
 | /api/movies/{movieid} | Get a Movie | N/A | N/A | N/A
-| /api/movies/{movieid}/reviews | Get all reviews for movie | Create a new review for Movie | N/A | N/A  
-| ... | ... | ... | ... | ...
+| /api/tmdb/topRatedMovies | Gets top rated movies | N/A | N/A | N/A 
+| /api/users | Gets users | Login | N/A | N/A 
+| /api/users/{userid}| Gets individual user | N/A | N/A | N/A 
+| /api/users?action=register | N/A | Adds a new user  | N/A | N/A 
+| /api/tvShows | Gets list of TV shows | N/A  | N/A | N/A 
+| /api/tvShows/{tvShowid} | Gets individual TV Show | N/A | N/A | N/A 
 
-If you have your API design on an online platform or graphic, please link to it (e.g. [Swaggerhub](https://app.swaggerhub.com/)).
-
+There are a number of TMDB routes from the previous project not listed above.
 
 ## Security and Authentication
-Give details of authentication/ security implemented on the API(e.g. passport/sessions). Indicate which routes are protected. **REMEMBER: DON'T PUT YOUR OWN USERNAMES/PASSWORDS/AUTH KEYS IN THE README OR ON GITHUB**
+Every route, except for user related routes are protected.
 
 ## Integrating with React App
 
 Describe how you integrated your React app with the API. Perhaps link to the React App repo and give an example of an API call from React App. For example: 
+React App - https://github.com/cfarrell02/MoviesApp
 
 ~~~Javascript
 export const getMovies = () => {
@@ -65,8 +67,8 @@ export const getMovies = () => {
 
 ## Extra features
 
-. . Briefly explain any non-standard features, functional or non-functional, developed for the app.  
+N/A
 
 ## Independent learning.
 
-. . State the non-standard aspects of React/Express/Node (or other related technologies) that you researched and applied in this assignment . .  
+N/A
