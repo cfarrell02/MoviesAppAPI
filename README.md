@@ -13,7 +13,7 @@ Name: Cian Farrell
 ## Installation Requirements
 
 
-Clone, repo. Download and set up all 3rd party software listed in package.json. Set up mongoDB. Start both servers.
+Clone repo. Download and set up all 3rd party software listed in package.json. Set up mongoDB. Start both servers, using npm install.
 
 
 ## API Configuration
